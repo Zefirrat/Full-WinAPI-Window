@@ -24,6 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,6 +34,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -56,22 +58,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="WinAPI\ClassStyles.cs" />
-    <Compile Include="WinAPI\MessagePump.cs" />
-    <Compile Include="WinAPI\PAINTSTRUCT.cs" />
-    <Compile Include="WinAPI\RECT.cs" />
-    <Compile Include="WinAPI\ShowWindowCommands.cs" />
-    <Compile Include="WinAPI\StockObjects.cs" />
-    <Compile Include="WinAPI\Win32_CW_Constant.cs" />
-    <Compile Include="WinAPI\Win32_DT_Constant.cs" />
-    <Compile Include="WinAPI\Win32_IDC_Constants.cs" />
-    <Compile Include="WinAPI\WinAPI.cs" />
-    <Compile Include="WinAPI\WindowStyles.cs" />
-    <Compile Include="WinAPI\WindowStylesEx.cs" />
-    <Compile Include="WinAPI\WM.cs" />
-    <Compile Include="WinAPI\WNDCLASS.cs" />
-    <Compile Include="WinAPI\WNDCLASSEX.cs" />
-    <Compile Include="WinAPI\WndProc.cs" />
+    <Compile Include="WindowsAPI\ClassStyles.cs" />
+    <Compile Include="WindowsAPI\MessagePump.cs" />
+    <Compile Include="WindowsAPI\PAINTSTRUCT.cs" />
+    <Compile Include="WindowsAPI\RECT.cs" />
+    <Compile Include="WindowsAPI\ShowWindowCommands.cs" />
+    <Compile Include="WindowsAPI\StockObjects.cs" />
+    <Compile Include="WindowsAPI\Win32_CW_Constant.cs" />
+    <Compile Include="WindowsAPI\Win32_DT_Constant.cs" />
+    <Compile Include="WindowsAPI\Win32_IDC_Constants.cs" />
+    <Compile Include="WindowsAPI\WinAPI.cs" />
+    <Compile Include="WindowsAPI\WindowStyles.cs" />
+    <Compile Include="WindowsAPI\WindowStylesEx.cs" />
+    <Compile Include="WindowsAPI\WM.cs" />
+    <Compile Include="WindowsAPI\WNDCLASS.cs" />
+    <Compile Include="WindowsAPI\WNDCLASSEX.cs" />
+    <Compile Include="WindowsAPI\WndProc.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

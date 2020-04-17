@@ -130,7 +130,7 @@ namespace Full_WinAPI_Window.WindowsAPI
             wndClass.cbWndExtra = 0;
             wndClass.hInstance = hInstance;
             wndClass.hIcon = WinAPI.LoadIcon(
-                IntPtr.Zero, SystemIcons.WinLogo.Handle);
+                IntPtr.Zero, new IntPtr(0));
             //wndClass.hCursor = WinAPI.LoadCursor(IntPtr.Zero, (int)IdcStandardCursor.IDC_ARROW);  
             wndClass.hCursor = WinAPI.LoadCursor(IntPtr.Zero, (int)Win32_IDC_Constants.IDC_ARROW);
             wndClass.hbrBackground = WinAPI.GetStockObject(StockObjects.WHITE_BRUSH);

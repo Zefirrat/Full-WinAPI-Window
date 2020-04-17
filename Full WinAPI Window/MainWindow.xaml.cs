@@ -36,9 +36,9 @@ namespace Full_WinAPI_Window
 
         private void CreateMessagePump()
         {
-            Main2(System.Diagnostics.Process.GetCurrentProcess().Handle, IntPtr.Zero, string.Empty, (int)ShowWindowCommands.Normal);
-            //MessagePump messagePump = new MessagePump();
-            //messagePump.CreateMessagePump(IntPtr.Zero, IntPtr.Zero, "some string", 0);
+            //Main2(System.Diagnostics.Process.GetCurrentProcess().Handle, IntPtr.Zero, string.Empty, (int)ShowWindowCommands.Normal);
+            MessagePump messagePump = new MessagePump();
+            messagePump.CreateMessagePump(IntPtr.Zero, IntPtr.Zero, "some string", 0);
         }
 
 
@@ -59,7 +59,7 @@ namespace Full_WinAPI_Window
                 WinAPI.TranslateMessage(ref msg);
                 WinAPI.DispatchMessage(ref msg);
             }
-            return msg.wParam == UIntPtr.Zero;
+            return Equals(msg.wParam, UIntPtr.Zero);
             //UNREFERENCED_PARAMETER(lpCmdLine);   
 
 
@@ -85,7 +85,7 @@ namespace Full_WinAPI_Window
             wcx.cbWndExtra = 0;
             wcx.hInstance = hinstance;
             wcx.hIcon = WinAPI.LoadIcon(
-                    IntPtr.Zero, SystemIcons.WinLogo.Handle);
+                    IntPtr.Zero, new IntPtr(10));
             //wndClass.hCursor = WinAPI.LoadCursor(IntPtr.Zero, (int)IdcStandardCursor.IDC_ARROW);  
             wcx.hCursor = WinAPI.LoadCursor(IntPtr.Zero, (int)Win32_IDC_Constants.IDC_ARROW);
             wcx.hbrBackground = WinAPI.GetStockObject(StockObjects.WHITE_BRUSH);
